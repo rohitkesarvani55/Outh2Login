@@ -1,0 +1,21 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: YOUR_CLIENT_ID_HERE
+            client-secret: YOUR_CLIENT_SECRET_HERE
+            redirect-uri: http://localhost:9090/login/oauth2/code/google
+            scope:
+              - email
+              - profile
+  main:
+    allow-circular-references: true
+
+server:
+  port: 9090
+  error:
+    whitelabel:
+      enabled: true
+    include-stacktrace: always 
